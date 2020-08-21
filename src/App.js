@@ -7,16 +7,42 @@ function App() {
   const products=[
     {name:"Photoshop", price:"$30"},
     {name:"Illustrator", price:"$50"},
-    {name:"After Effects", price:"$75"}
+    {name:"After Effects", price:"$75"},
+    {name:"XD", price:"$70"},
+    {name:"Adobe Premium pro", price:"$80"},
+    {name:"Adobe Ultra", price:"$200"}
   ]
+  const footer={
+    color:'#000',
+    fontSize:'30px',
+    marginTop:'30px',
+    padding:'30px',
+  }
+const a={
+  textDecoration:'none',
+  color:'green'
+}
+const header={
+  backgroundColor:'#000',
+  color:'#fff',
+  padding:'20px',
+  border:'10px dotted #fff',
+}
   return (
     <div className="App">
       <header className="App-header">
+        <h1 style={header}> React Dynamic Card</h1>
         <div>
         <Product products={products[0]}></Product>
         <Product products={products[1]}></Product>
         <Product products={products[2]}></Product>
         </div>
+        <div>
+        <Product products={products[3]}></Product>
+        <Product products={products[4]}></Product>
+        <Product products={products[5]}></Product>
+        </div>
+        <footer style={footer}> 2020 &copy;  All Received by <a href="#" style={a}>SHAKIL</a> </footer>
       </header>
     </div>
   );
@@ -32,7 +58,9 @@ function Product(props){
     float:'left',
     marginRight:'30px',
     padding:'20px',
-    boxShadow:' 0 0 15px'
+    boxShadow:' 0 0 15px',
+    marginTop:'30px',
+    
   }
   const button={
     border:'2ps solid #green',
